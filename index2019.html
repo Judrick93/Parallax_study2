@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow" />
+
+
+    <meta name="Date" content="2022-03-10" />
+    <meta http-equiv="Subject" content="나를 다시 돌아봐 줄 수 있나요?" />
+    <meta http-equiv="Author" content="Judrick" />
+    <meta http-equiv="Title" content="Project Soobong Mary" />
+    <meta http-equiv="Generator" content="Atom" />
+    <meta http-equiv="Email" content ="judrick@kakao.com" />
+    <title>Project Soobong Mary</title>
+    <link rel="stylesheet" type="text/css" href="css/style2019.css"
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">Project SBmary</a>
+      <ul>
+        <li><a href="index2017.html" >2017</a></li>
+        <li><a href="index2019.html" class="active">2019</a></li>
+        <li><a href="index2020.html" data-transition="fade">2020</a></li>
+        <li><a href="index2021.html" data-transition="flow">2021</a></li>
+        <li><a href="index2022.html" data-transition="slidefade">2022..?</a></li>
+      </ul>
+      </header>
+      <section>
+        <img src="img/heart3.png" id="heart3">
+        <img src="img/moon3.png" id="moon3">
+        <img src="img/mid3.png" id="mid3">
+        <h2 id="text">2019</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="img/front3.png" id="front3">
+      </section>
+      <div class="sec" id="sec">
+        <h2>낙법의 날</h2>
+        <div class="img_box">
+          <img src="img/2019_1.jpg">
+          <img src="img/2019_3.jpg">
+          <img src="img/2019_4.jpg">
+          <img src="img/2019_5.jpg">
+        </div>
+      </div>
+
+      <script>
+        let heart3 = document.getElementById('heart3');
+        let moon3 = document.getElementById('moon3');
+        let mid3 = document.getElementById('mid3');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let front3 = document.getElementById('front3');
+        let header = document.getElementById('header');
+
+        window.addEventListener('scroll', function(){
+          let value = window.scrollY;
+          heart3.style.left = value * 0.25 + 'px';
+          moon3.style.top = value * 1.05 + 'px';
+          mid3.style.top = value * 0.5 + 'px';
+          front3.style.top = value * 0 + 'px';
+          text.style.marginRight = value * 4 + 'px';
+          text.style.marginTop = value * 1.5 + 'px';
+          btn.style.marginTop = value * 1.5 + 'px';
+          header.style.top = value * 0.5 + 'px';
+        })
+      </script>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow" />
+
+
+    <meta name="Date" content="2022-03-10" />
+    <meta http-equiv="Subject" content="나를 다시 돌아봐 줄 수 있나요?" />
+    <meta http-equiv="Author" content="Judrick" />
+    <meta http-equiv="Title" content="Project Soobong Mary" />
+    <meta http-equiv="Generator" content="Atom" />
+    <meta http-equiv="Email" content ="judrick@kakao.com" />
+    <title>Project Soobong Mary</title>
+    <link rel="stylesheet" type="text/css" href="css/style2021.css"
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">Project SBmary</a>
+      <ul>
+        <li><a href="index2017.html" >2017</a></li>
+        <li><a href="index2019.html" >2019</a></li>
+        <li><a href="index2020.html" >2020</a></li>
+        <li><a href="index2021.html" class="active">2021</a></li>
+        <li><a href="index2022.html" data-transition="slidefade">2022..?</a></li>
+      </ul>
+      </header>
+      <section>
+        <img src="img/thunder5.png" id="thunder5">
+        <img src="img/moon5.png" id="moon5">
+        <img src="img/mid5.png" id="mid5">
+        <img src="img/behind5.png" id="behind5">
+        <h2 id="text">2021</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="img/front5.png" id="front5">
+      </section>
+      <div class="sec" id="sec">
+        <h2>피카츄 대량발생</h2>
+        <div class="img_box">
+          <img src="img/2021_1.jpg">
+          <img src="img/2021_2.jpg">
+          <img src="img/2021_3.jpg">
+          <img src="img/2021_4.jpg">
+          <img src="img/2021_5.jpg">
+          <img src="img/2021_6.jpg">
+          <img src="img/2021_7.jpg">
+          <img src="img/2021_8.jpg">
+          <img src="img/2021_9.jpg">
+          <img src="img/2021_10.jpg">
+          <img src="img/2021_11.jpg">
+          <img src="img/2021_12.jpg">
+        </div>
+      </div>
+
+      <script>
+        let thunder5 = document.getElementById('thunder5');
+        let moon5 = document.getElementById('moon5');
+        let mid5 = document.getElementById('mid5');
+        let behind5 = document.getElementById('behind5');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let front5 = document.getElementById('front5');
+        let header = document.getElementById('header');
+
+        window.addEventListener('scroll', function(){
+          let value = window.scrollY;
+          thunder5.style.left = value * 0.01 + 'px';
+          moon5.style.top = value * 0.25 + 'px';
+          mid5.style.top = value * 0.3 + 'px';
+          behind5.style.top = value * 0.2 + 'px';
+          front5.style.top = value * 0 + 'px';
+          text.style.marginRight = value * 4 + 'px';
+          text.style.marginTop = value * 1.5 + 'px';
+          btn.style.marginTop = value * 1.5 + 'px';
+          header.style.top = value * 0.5 + 'px';
+        })
+      </script>
+  </body>
+</html>

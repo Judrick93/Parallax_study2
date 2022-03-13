@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style2022.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300" rel="stylesheet">
+    <style>
+    body {
+      margin: 0;
+    }
+    .scene {
+      height: 100vh;
+      overflow: hidden;
+      background-attachment: fixed;
+      background-size: cover;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: 200;
+    }
+    .scene header {
+      color : white;
+      max-width: 80%;
+      position: relative;
+      left: 50%;
+      top:50%;
+      transform: translateX(-50%) translateY(-50%);
+      font-size: 1rem;
+      text-align: center;
+
+    }
+    .scene header h1{
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      font-weight: 300;
+    }
+    .scene header h1:after{
+      content:'';
+      border-bottom:1px solid white;
+      width:8rem;
+      display: block;
+      margin:0 auto;
+      margin-top:1rem;
+    }
+    .scene.one {
+      background-image: url(img/2022.png);
+    }
+    .scene.two {
+      background-image: url(img/2022grayscale.png);
+    }
+    .scene.three {
+      background: #000;
+    }
+    #andbtn
+    {
+      text-decoration: none;
+      display: inline-block;
+      padding: 8px 30px;
+      border-radius: 40px;
+      background: rgba(255,255,255,0.5);
+      color: #333;
+      font-size: 1.5em;
+      z-index: 12;
+      transform: translateY(100px);
+      margin: 100px;
+    }
+    #andbtn:hover
+    {
+      background: rgba(255,255,255,1);
+      color: #0676bd;
+    }
+    #endbtn
+    {
+      text-decoration: none;
+      display: inline-block;
+      padding: 8px 30px;
+      border-radius: 40px;
+      background: rgba(255,255,255,0.5);
+      color: #333;
+      font-size: 1.5em;
+      z-index: 12;
+      transform: translateY(100px);
+      margin: 100px;
+    }
+    #endbtn:hover
+    {
+      background: rgba(255,255,255,1);
+      color: #770d0d;
+    }
+    /* 레이어 팝업 */
+    #layer
+    {
+      display: none; position: fixed; left: 50px; top: 50px; width: 700px; border: 10px solid #0676bd; box-shadow: 3px 3px 10px rgba(0,0,0,0.4);
+    }
+    #layer img
+    {
+      width: 100%; display: block;
+    }
+    #layer .close
+    {
+      position: absolute; right: 20px; top: 20px; background: #0676bd; padding: 1px 2px; color: #fff;
+    }
+    #layer .close:hover
+    {
+      text-decoration: underline;
+    }
+
+    </style>
+  </head>
+  <body>
+    <section class="scene one">
+      <header>
+        <h1>And?</h1>
+
+      </header>
+    </section>
+    <section class="scene two">
+      <header>
+        <h1>End....?</h1>
+
+      </header>
+    </section>
+    <section class="scene three">
+      <header>
+
+        <a class="layer" href="#sec" id="andbtn">그리웠어요.</a>
+        <a class="window" href="#sec" id="endbtn">그만할래요.</a>
+
+      </header>
+
+      <!-- layer popup-->
+      <div id="layer">
+          <img src="img/bg2.jpg" alt="웹표준 사이트">
+          <a href="#" class="close">Close</a>
+      </div>
+      <!-- //layer popup-->
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="js/custom.js"></script>
+  </body>
+
+</html>
